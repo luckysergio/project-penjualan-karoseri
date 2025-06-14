@@ -1,61 +1,207 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🚛 Sistem Informasi Penjualan Karoseri Dump Truck
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+<div align="center">
 
-## About Laravel
+![Laravel](https://img.shields.io/badge/Laravel-12-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-8+-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+*Sistem manajemen penjualan karoseri dump truck yang modern, efisien, dan real-time*
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+</div>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 📋 Deskripsi Proyek
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Sistem Informasi Penjualan Karoseri Dump Truck adalah solusi komprehensif yang dikembangkan untuk mengoptimalkan proses bisnis penjualan produk karoseri. Sistem ini menawarkan pendekatan terstruktur dalam mengelola inventori, pemesanan, dan tracking status produksi dengan antarmuka yang intuitif dan responsif.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### 🎯 **Tujuan Sistem**
+- Menyederhanakan alur kerja penjualan karoseri
+- Meningkatkan transparansi proses order untuk customer
+- Menyediakan dashboard analitik untuk pengambilan keputusan bisnis
+- Mengotomatisasi perhitungan harga dan dokumentasi transaksi
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## ✨ Fitur Unggulan
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 🏭 **Manajemen Produk Komprehensif**
+- **Katalog Produk**: Pengelolaan data Type, Jenis, dan Chassis secara hierarkis
+- **Spesifikasi Detail**: Input spesifikasi teknis lengkap untuk setiap produk
+- **Relasi Dinamis**: Sistem relasi antar kategori untuk kemudahan pencarian
+- **Inventory Tracking**: Monitoring stok dan ketersediaan produk
 
-### Premium Partners
+### 📋 **Sistem Pemesanan Terintegrasi**
+- **Sales Order Builder**: Interface drag-and-drop untuk pembuatan order
+- **Kalkulasi Otomatis**: Perhitungan harga, diskon, dan pajak secara real-time
+- **Multi-Payment Support**: Dukungan berbagai metode pembayaran
+- **Document Management**: Upload dan preview bukti pembayaran dengan validasi
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### 📊 **Workflow Management**
+- **Status Tracking**: Pelacakan status dari order → approval → produksi → delivery
+- **Timeline Visualization**: Visualisasi progress order dalam bentuk timeline
+- **Automated Notifications**: Notifikasi otomatis untuk setiap perubahan status
+- **Audit Trail**: Log lengkap aktivitas untuk compliance dan tracking
 
-## Contributing
+### 📈 **Dashboard & Analytics**
+- **Real-time Metrics**: KPI dashboard dengan update real-time
+- **Visual Reporting**: Grafik interaktif untuk analisis penjualan
+- **Custom Filters**: Filter berdasarkan periode, status, atau kategori produk
+- **Export Functionality**: Export laporan dalam format Excel/PDF
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 🔔 **Notifikasi Real-time**
+- **Pusher Integration**: Update status order tanpa refresh halaman
+- **Multi-channel Alerts**: Notifikasi via email, SMS, dan in-app
+- **Role-based Notifications**: Notifikasi sesuai peran user (admin, sales, customer)
 
-## Code of Conduct
+---
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## 🛠️ Tech Stack
 
-## Security Vulnerabilities
+| Kategori | Teknologi | Versi | Deskripsi |
+|----------|-----------|-------|-----------|
+| **Backend** | Laravel | 12.x | Framework PHP modern dengan ecosystem lengkap |
+| **Frontend** | Tailwind CSS | 3.x | Utility-first CSS framework untuk UI responsif |
+| **Database** | MySQL | 8.0+ | Relational database management system |
+| **Build Tool** | Vite | 5.x | Next generation frontend build tool |
+| **Real-time** | Pusher | - | WebSocket service untuk notifikasi real-time |
+| **UI Components** | SweetAlert2 | - | Beautiful popup notifications |
+| **Notifications** | Toastr | - | Non-blocking notifications |
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+---
 
-## License
+## 🚀 Quick Start
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 📋 Prerequisites
+
+Pastikan sistem Anda memiliki:
+- PHP >= 8.1
+- Composer >= 2.0
+- Node.js >= 18.x
+- MySQL >= 8.0
+- Git
+
+### 🔧 Instalasi
+
+#### 1️⃣ **Clone & Setup Project**
+```bash
+# Clone repository
+git clone https://github.com/luckysergio/project-penjualan-karoseri.git
+cd project-penjualan-karoseri
+
+# Install dependencies
+composer install
+npm install
+```
+
+#### 2️⃣ **Environment Configuration**
+```bash
+# Copy environment file
+cp .env.example .env
+
+# Generate application key
+php artisan key:generate
+```
+
+#### 3️⃣ **Database Setup**
+```bash
+# Edit .env file dengan konfigurasi database Anda
+DB_DATABASE=karoseri_db
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+
+# Run migrations dan seeders
+php artisan migrate
+php artisan db:seed
+```
+
+#### 4️⃣ **Build Assets & Run Server**
+```bash
+# Build frontend assets
+npm run dev
+
+# Start development server
+php artisan serve
+```
+
+#### 5️⃣ **Pusher Configuration (Optional)**
+```bash
+# Edit .env untuk real-time notifications
+PUSHER_APP_ID=your_app_id
+PUSHER_APP_KEY=your_key
+PUSHER_APP_SECRET=your_secret
+PUSHER_APP_CLUSTER=your_cluster
+```
+
+---
+
+## 📁 Struktur Project
+
+```
+project-penjualan-karoseri/
+├── app/
+│   ├── Http/Controllers/     # Controllers untuk business logic
+│   ├── Models/              # Eloquent models
+│   └── Services/            # Business services layer
+├── database/
+│   ├── migrations/          # Database schema migrations
+│   └── seeders/            # Data seeders
+├── resources/
+│   ├── views/              # Blade templates
+│   ├── js/                 # Frontend JavaScript
+│   └── css/                # Styles dan Tailwind
+├── routes/
+│   ├── web.php             # Web routes
+│   └── api.php             # API routes
+└── public/                 # Public assets
+```
+
+---
+
+## 🤝 Contributing
+
+Kami sangat menghargai kontribusi dari komunitas! Untuk berkontribusi:
+
+1. Fork repository ini
+2. Buat feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit perubahan (`git commit -m 'Add some AmazingFeature'`)
+4. Push ke branch (`git push origin feature/AmazingFeature`)
+5. Buka Pull Request
+
+---
+
+## 📝 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+---
+
+## 📞 Contact & Support
+
+### 👨‍💻 **Developer**
+**Lucky Sergio**
+- 📧 Email: [luckysergio77@gmail.com](mailto:luckysergio77@gmail.com)
+- 📱 Instagram: [@lcksr](https://instagram.com/lcksr)
+- 💼 LinkedIn: [Lucky Sergio](https://linkedin.com/in/luckysergio)
+
+### 🐛 **Issues & Bug Reports**
+Jika Anda menemukan bug atau memiliki saran, silakan buat issue di [GitHub Issues](https://github.com/luckysergio/project-penjualan-karoseri/issues)
+
+### 💬 **Community**
+Join komunitas developer Indonesia untuk diskusi dan sharing:
+- [Telegram Group](https://t.me/laravel_indonesia)
+- [Discord Server](https://discord.gg/laravel)
+
+---
+
+<div align="center">
+
+**⭐ Jika project ini membantu, jangan lupa berikan star! ⭐**
+
+*Made with ❤️ by Lucky Sergio*
+
+![Visitor Count](https://visitor-badge.laobi.icu/badge?page_id=luckysergio.project-penjualan-karoseri)
+
+</div>

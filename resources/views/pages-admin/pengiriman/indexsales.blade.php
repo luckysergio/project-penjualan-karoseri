@@ -52,10 +52,12 @@
                             </div>
 
                             <div class="flex flex-col gap-3">
-                                <a href="{{ url('/pengiriman/' . $pengiriman->id) }}"
-                                    class="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold text-center py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200">
-                                    Edit Pengiriman
-                                </a>
+                                @if ($pengiriman->status != 'selesai')
+                                    <a href="{{ url('/pengiriman/' . $pengiriman->id) }}"
+                                        class="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold text-center py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200">
+                                        Edit Pengiriman
+                                    </a>
+                                @endif
                             </div>
 
                         </div>

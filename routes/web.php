@@ -20,7 +20,7 @@ Route::get('/', function () {
 
 Route::get('/pesanan', [OrderController::class, 'pesanan'])->name('pesanan')->middleware('role:Pelanggan');
 
-Route::get('/', [TypeDumpController::class, 'home']);
+Route::get('/', [ProductController::class, 'home']);
 Route::get('/', [SpkWpController::class, 'index']);
 
 
@@ -107,3 +107,5 @@ Route::post('/pengiriman', [PengirimanController::class, 'store'])->middleware('
 Route::get('/pengiriman/{id}', [PengirimanController::class, 'edit'])->middleware('role:Karyawan');
 Route::put('/pengiriman/{id}', [PengirimanController::class, 'update'])->middleware('role:Karyawan');
 Route::delete('/pengiriman/{id}', [pengirimanController::class, 'destroy'])->middleware('role:Karyawan');
+
+Route::get('/order/{id}/cetak', [OrderController::class, 'cetak'])->name('order.cetak');

@@ -32,7 +32,7 @@ class PengirimanController extends Controller
         })
             ->whereIn('status', ['persiapan', 'dikirim', 'selesai'])
             ->with('order')
-            ->latest()
+            ->orderByRaw("FIELD(status, 'persiapan', 'dikirim', 'selesai')")
             ->paginate(6);
 
         return view('pages-admin.pengiriman.indexsales', compact('pengirimans'));

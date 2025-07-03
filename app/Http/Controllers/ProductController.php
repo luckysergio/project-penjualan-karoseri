@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Chassis;
 use App\Models\JenisDump;
-use App\Models\product;
+use App\Models\Product; // ✅ Perbaikan: Gunakan PascalCase
 use App\Models\TypeDump;
 use Illuminate\Http\Request;
 
@@ -12,7 +12,7 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products = product::all();
+        $products = Product::all(); // ✅ Perbaikan: Gunakan Product dengan P besar
         return view(
             'pages-admin.product.index',
             [
@@ -92,10 +92,18 @@ class ProductController extends Controller
 
     public function destroy($id)
     {
-        $products = product::findOrFail($id);
-        $products->delete();
+        $product = Product::findOrFail($id); // ✅ Perbaikan: Gunakan Product dan nama variabel singular
+        $product->delete();
         return redirect('/product')->with('success', 'Berhasil menghapus data');
     }
 
-    
+    public function home()
+    {
+        $products = Product::latest()->take(8)->get();
+        $jenis_dumps = JenisDump::latest()->take(12)->get();
+        $type_dumps = TypeDump::latest()->take(12)->get();
+        $chassis = Chassis::latest()->take(12)->get();
+
+        return view('home', compact('products', 'jenis_dumps', 'type_dumps', 'chassis'));
+    }
 }

@@ -69,15 +69,15 @@ class TypeDumpController extends Controller
         return back()->with('success', 'Data berhasil dihapus');
     }
 
-    public function home()
-    {
-        $data = [
-            'products' => product::latest()->take(8)->get(),
-            'jenis_dumps' => JenisDump::latest()->take(12)->get(),
-            'type_dumps' => TypeDump::latest()->take(12)->get(),
-            'chassis' => Chassis::latest()->take(12)->get(),
-        ];
+    // public function home()
+    // {
+    //     $data = [
+    //         'products' => Product::latest()->take(8)->get(),
+    //         'jenis_dumps' => JenisDump::latest()->take(12)->get(),
+    //         'type_dumps' => TypeDump::latest()->take(12)->get(),
+    //         'chassis' => Chassis::latest()->take(12)->get(),
+    //     ];
 
-        return view('home', $data);
-    }
+    //     return view('home', $data);
+    // }
 }

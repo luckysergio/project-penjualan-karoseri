@@ -50,12 +50,12 @@
         Data Produk
     </div>
 
-    {{-- <li class="nav-item {{ request()->is('product') ? 'active' : '' }}">
+    <li class="nav-item {{ request()->is('product') ? 'active' : '' }}">
         <a class="nav-link" href="/product">
             <i class="fas fa-fw fa-box"></i>
             <span>Product</span>
         </a>
-    </li> --}}
+    </li>
 
     <li class="nav-item {{ request()->is('jenis') ? 'active' : '' }}">
         <a class="nav-link" href="/jenis">

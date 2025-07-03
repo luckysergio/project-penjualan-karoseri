@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\JenisDump;
+use App\Models\Product;
 use App\Models\TypeDump;
 use App\Models\DetailOrder;
 use App\Models\Order;
@@ -24,7 +25,6 @@ class SpkWpController extends Controller
             $totalQty = $detailOrders->sum('qty');
             $totalOrder = $detailOrders->count();
 
-            // Jika tidak ada order sama sekali, kita skip
             if ($totalOrder == 0) continue;
 
             $avgQty = $totalQty / $totalOrder;
@@ -55,18 +55,19 @@ class SpkWpController extends Controller
         $type_dumps = TypeDump::all();
         $jenis_dumps = JenisDump::all();
         $chassis = Chassis::all();
+        $products = Product::latest()->take(6)->get();
 
         return view('home', [
             'hasil' => $hasil_spk,
             'type_dumps' => $type_dumps,
             'jenis_dumps' => $jenis_dumps,
-            'chassis' => $chassis
+            'chassis' => $chassis,
+            'products' => $products
         ]);
     }
 
     private function hitungWeightedProduct($data)
     {
-        // Kalau datanya kosong, langsung kembalikan array kosong
         if (empty($data)) {
             return [];
         }
@@ -99,7 +100,6 @@ class SpkWpController extends Controller
 
         $sumS = array_sum($totalS);
 
-        // Jika semua hasil 0, hindari pembagian nol
         if ($sumS == 0) {
             return [];
         }

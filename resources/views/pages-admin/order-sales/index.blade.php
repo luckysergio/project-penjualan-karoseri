@@ -262,10 +262,15 @@
                                             </div>
                                         </div>
 
-                                        <div class="flex justify-center gap-4 p-6 border-t border-gray-200 bg-gray-50">
+                                        <div class="flex justify-between gap-4 p-6 border-t border-gray-200 bg-gray-50">
                                             <button onclick="closeModal({{ $order->id }})"
                                                 class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2.5 px-6 rounded-xl transition-colors">
                                                 Tutup
+                                            </button>
+                                            <button
+                                                onclick="window.open('{{ route('order.cetak', $order->id) }}', '_blank')"
+                                                class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 px-6 rounded-xl transition-colors">
+                                                Cetak PDF
                                             </button>
                                         </div>
                                     </div>

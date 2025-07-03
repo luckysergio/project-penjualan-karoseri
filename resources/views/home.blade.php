@@ -8,41 +8,44 @@
     <script>
         AOS.init();
     </script>
-    <!-- Hero Section -->
+
     <section
-    class="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 text-white py-24 sm:py-32 overflow-hidden">
-    <div class="absolute inset-0 bg-black/20"></div>
-    <div class="absolute inset-0">
-        <div class="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl"></div>
-        <div class="absolute top-32 right-20 w-32 h-32 bg-white/10 rounded-full blur-xl"></div>
-        <div class="absolute bottom-20 left-32 w-24 h-24 bg-white/10 rounded-full blur-xl"></div>
-    </div>
-
-    <div class="animate__animated animate__fadeInUp animate__delay-1s">
-        <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Selamat Datang di
-                <span class="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
-                    PT. HARAPAN DUTA PERTIWI
-                </span>
-            </h1>
-            <p class="text-lg sm:text-xl lg:text-2xl font-light leading-relaxed mb-10 max-w-4xl mx-auto opacity-90">
-                PT. Harapan Duta Pertiwi adalah <strong>perusahaan karoseri</strong> profesional yang bergerak dalam pembuatan dan modifikasi <strong>dump truck, trailer, tangki, wingbox, serta kendaraan niaga lainnya</strong>. Dengan teknologi modern, tim ahli berpengalaman, serta standar kualitas tinggi, kami melayani kebutuhan industri <strong>pertambangan, konstruksi, logistik, dan transportasi</strong> di seluruh Indonesia.
-            </p>
-            <a href="#produk"
-                class="inline-flex items-center bg-white text-indigo-600 px-8 py-4 rounded-full shadow-2xl hover:shadow-3xl hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 font-semibold text-lg group">
-                <span>Lihat Produk Unggulan</span>
-                <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" fill="none"
-                    stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
-                    </path>
-                </svg>
-            </a>
+        class="relative bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 text-white py-24 sm:py-32 overflow-hidden">
+        <div class="absolute inset-0 bg-black/20"></div>
+        <div class="absolute inset-0">
+            <div class="absolute top-10 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl"></div>
+            <div class="absolute top-32 right-20 w-32 h-32 bg-white/10 rounded-full blur-xl"></div>
+            <div class="absolute bottom-20 left-32 w-24 h-24 bg-white/10 rounded-full blur-xl"></div>
         </div>
-    </div>
-</section>
 
-    <!-- Products Section -->
+        <div class="animate__animated animate__fadeInUp animate__delay-1s">
+            <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                    Selamat Datang di
+                    <span class="block bg-gradient-to-r from-yellow-300 to-orange-300 bg-clip-text text-transparent">
+                        PT. HARAPAN DUTA PERTIWI
+                    </span>
+                </h1>
+                <p class="text-lg sm:text-xl lg:text-2xl font-light leading-relaxed mb-10 max-w-4xl mx-auto opacity-90">
+                    PT. Harapan Duta Pertiwi adalah <strong>perusahaan karoseri</strong> profesional yang bergerak dalam
+                    pembuatan dan modifikasi <strong>dump truck, trailer, tangki, wingbox, serta kendaraan niaga
+                        lainnya</strong>. Dengan teknologi modern, tim ahli berpengalaman, serta standar kualitas tinggi,
+                    kami melayani kebutuhan industri <strong>pertambangan, konstruksi, logistik, dan transportasi</strong>
+                    di seluruh Indonesia.
+                </p>
+                <a href="#produk"
+                    class="inline-flex items-center bg-white text-indigo-600 px-8 py-4 rounded-full shadow-2xl hover:shadow-3xl hover:bg-gray-50 transition-all duration-300 transform hover:scale-105 font-semibold text-lg group">
+                    <span>Lihat Produk Unggulan</span>
+                    <svg class="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
     <section id="spk" class="py-20 sm:py-24 bg-gradient-to-br from-indigo-50 to-white min-h-screen flex items-center">
         <div class="max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up" data-aos-duration="1000">
 
@@ -70,19 +73,16 @@
     </section>
 
     @push('scripts')
-        <!-- AOS -->
         <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
         <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
         <script>
             AOS.init();
         </script>
 
-        <!-- Chart.js -->
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script>
             const hasil = {!! json_encode($hasil) !!};
 
-            // Cek apakah datanya kosong
             if (hasil.length === 0) {
                 document.getElementById('spkChart').parentNode.innerHTML = `
                 <div class="flex justify-center items-center h-[400px] text-gray-500 text-xl rounded-lg bg-white shadow">
@@ -160,10 +160,104 @@
         </script>
     @endpush
 
-    <!-- Product Information Section -->
+    <section id="produk-unggulan" class="py-20 sm:py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-extrabold text-gray-900 mb-4" data-aos="fade-up" data-aos-duration="1000">
+                    Produk Unggulan Kami
+                </h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full mb-6"
+                    data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"></div>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto" data-aos="fade-up" data-aos-duration="1000"
+                    data-aos-delay="400">
+                    Jelajahi koleksi lengkap produk berkualitas tinggi kami yang telah dipercaya oleh berbagai industri di
+                    seluruh Indonesia
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                @forelse ($products as $product)
+                    <div class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden"
+                        data-aos="fade-up" data-aos-duration="800" data-aos-delay="{{ $loop->index * 100 }}">
+
+                        <!-- Product Image -->
+                        <div class="relative overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 h-64">
+                            @if ($product->image)
+                                <img src="{{ $product->image }}" alt="{{ $product->nama }}"
+                                    class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                            @else
+                                <div class="flex items-center justify-center h-full">
+                                    <div class="text-center">
+                                        <svg class="w-16 h-16 text-gray-400 mx-auto mb-2" fill="none"
+                                            stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+                                            </path>
+                                        </svg>
+                                        <p class="text-gray-500 text-sm">No Image</p>
+                                    </div>
+                                </div>
+                            @endif
+
+                            <!-- Status Badge -->
+                            <div class="absolute top-4 right-4">
+                                <span
+                                    class="px-3 py-1 rounded-full text-xs font-semibold {{ $product->status === 'tersedia' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800' }}">
+                                    {{ ucfirst($product->status) }}
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Product Info -->
+                        <div class="p-6">
+                            <h3
+                                class="text-xl font-bold text-gray-900 mb-3 group-hover:text-indigo-600 transition-colors duration-300">
+                                {{ $product->nama }}
+                            </h3>
+
+                            <!-- Dimensions -->
+                            @if ($product->length || $product->width || $product->height)
+                                <div class="flex items-center mb-3 text-sm text-gray-600">
+                                    <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4">
+                                        </path>
+                                    </svg>
+                                    <span>
+                                        @if ($product->length)
+                                            {{ $product->length }}m
+                                        @endif
+                                        @if ($product->width)
+                                            × {{ $product->width }}m
+                                        @endif
+                                        @if ($product->height)
+                                            × {{ $product->height }}m
+                                        @endif
+                                    </span>
+                                </div>
+                            @endif
+
+                            <!-- Price -->
+                            <div class="flex items-center justify-between">
+                                <div class="text-2xl font-bold text-indigo-600">
+                                    Rp {{ number_format($product->harga, 0, ',', '.') }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @empty
+                    <div class="col-span-full text-center py-16">
+                        <div class="text-6xl mb-4 opacity-50">📦</div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Belum Ada Produk</h3>
+                        <p class="text-gray-600">Produk akan segera hadir. Silakan cek kembali nanti.</p>
+                    </div>
+                @endforelse
+            </div>
+        </div>
+    </section>
+
     <section id="produk" class="py-20 sm:py-24 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Section Header -->
             <div class="text-center mb-16">
                 <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4" data-aos="fade-up"
                     data-aos-duration="1000">
@@ -177,9 +271,7 @@
                 </p>
             </div>
 
-            <!-- Product Information Tabs -->
             <div class="grid lg:grid-cols-3 gap-8">
-                <!-- Type Dumps (First) -->
                 <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
                     data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                     <div class="flex items-center mb-6">
@@ -222,7 +314,6 @@
                     </div>
                 </div>
 
-                <!-- Jenis Dumps (Second) -->
                 <div class="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
                     data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
                     <div class="flex items-center mb-6">
@@ -253,7 +344,6 @@
                     </div>
                 </div>
 
-                <!-- Chassis (Third) -->
                 <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300"
                     data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
                     <div class="flex items-center mb-6">
@@ -290,7 +380,6 @@
         </div>
     </section>
 
-    <!-- Features Section -->
     <section class="py-20 sm:py-24 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Section Header -->

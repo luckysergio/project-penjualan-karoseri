@@ -13,6 +13,7 @@ use App\Models\DetailOrder;
 use App\Models\Pembayaran;
 use App\Models\Pengiriman;
 use App\Models\TypeDump;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -96,13 +97,11 @@ class OrderController extends Controller
         $bulan = $request->bulan;
         $tahun = $request->tahun;
 
-        // Default kosong di awal
         $orders = collect();
         $totalOrder = 0;
         $totalPendapatan = 0;
         $rataRata = 0;
 
-        // Hanya jika user sudah pilih bulan & tahun
         if ($bulan && $tahun) {
             $orders = Order::with(['pengiriman'])
                 ->where('status_order', 'selesai')
@@ -130,7 +129,6 @@ class OrderController extends Controller
         $bulan = $request->bulan;
         $tahun = $request->tahun;
 
-        // Default kosong di awal
         $orders = collect();
         $totalOrder = 0;
         $totalPendapatan = 0;
@@ -294,10 +292,8 @@ class OrderController extends Controller
                     }
                 }
 
-                // Tambahkan update tanggal_selesai di orders
                 $tanggalSelesaiArray = array_filter(array_values($validated['tanggal_selesai']));
                 if (!empty($tanggalSelesaiArray)) {
-                    // Ambil tanggal selesai paling akhir dari semua detail
                     $tanggalSelesaiTerakhir = max($tanggalSelesaiArray);
                     $order->tanggal_selesai = $tanggalSelesaiTerakhir;
                 } else {
@@ -326,7 +322,6 @@ class OrderController extends Controller
     private function broadcastDashboardCounts()
     {
         try {
-            // Untuk Admin
             $orderMasuk = Order::where('status_order', 'pending')->count();
             $orderBerjalan = Order::where('status_order', 'proses')->count();
             $orderSelesai = Order::where('status_order', 'selesai')->count();
@@ -358,5 +353,22 @@ class OrderController extends Controller
         } catch (\Exception $e) {
             Log::error("Gagal broadcast pusher: " . $e->getMessage());
         }
+    }
+
+    public function cetak($id)
+    {
+        $order = Order::with([
+            'pelanggan.user',
+            'detailOrders.typeDump',
+            'detailOrders.jenisDump',
+            'detailOrders.chassis',
+            'pengiriman',
+            'pembayarans'
+        ])->findOrFail($id);
+
+        $pdf = Pdf::loadView('pages-admin.order-sales.pdf', compact('order'))
+            ->setPaper('a4', 'portrait');
+
+        return $pdf->stream('HOPE-KDT-00' . $order->id . '.pdf');
     }
 }

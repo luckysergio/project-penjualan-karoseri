@@ -323,7 +323,6 @@
                                                 </div>
                                             </div>
 
-                                            {{-- Info Pengiriman --}}
                                             <div
                                                 class="mt-2 text-xs text-slate-600 bg-slate-50 rounded p-3 border border-slate-200 space-y-2">
                                                 <div><span class="font-semibold">Biaya Pengiriman:</span> <span
@@ -392,12 +391,19 @@
                                         </div>
 
                                         <div class="text-right w-full md:w-auto space-y-4">
-                                            <div class="text-2xl font-bold text-slate-800">Rp
-                                                {{ number_format($totalTagihan, 0, ',', '.') }}</div>
+                                            <div class="text-2xl font-bold text-slate-800">
+                                                Rp {{ number_format($totalTagihan, 0, ',', '.') }}
+                                            </div>
+
                                             <span
                                                 class="inline-block bg-gradient-to-r from-gray-400 to-gray-600 text-white px-5 py-2 rounded-lg text-sm font-semibold shadow-md">
                                                 Transaksi Selesai
                                             </span>
+
+                                            <a href="{{ route('order.cetak', $order->id) }}" target="_blank"
+                                                class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg text-sm font-semibold shadow transition">
+                                                Cetak PDF
+                                            </a>
                                         </div>
                                     </div>
                                 @endforeach

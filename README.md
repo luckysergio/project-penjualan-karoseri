@@ -13,6 +13,27 @@
 
 ---
 
+## 🖼️ Tampilan Antarmuka
+
+### 🔐 Register & Login (Web)
+
+<p align="center">
+  <img src="public/tampilan/register.png" alt="Register" width="48%" style="margin-right:10px;">
+  <img src="public/tampilan/login.png" alt="Login" width="48%">
+</p>
+
+---
+
+### 🏠 Halaman Utama (Customer, Admin, Sales)
+
+<p align="center">
+  <img src="public/tampilan/home-customer.png" alt="Home Customer" width="32%" style="margin:5px;">
+  <img src="public/tampilan/home-admin.png" alt="Home Admin" width="32%" style="margin:5px;">
+  <img src="public/tampilan/home-sales.png" alt="Home Sales" width="32%" style="margin:5px;">
+</p>
+
+---
+
 ## 📋 Deskripsi Proyek
 
 Sistem Informasi Penjualan Karoseri Dump Truck adalah solusi komprehensif yang dikembangkan untuk mengoptimalkan proses bisnis penjualan produk karoseri. Sistem ini menawarkan pendekatan terstruktur dalam mengelola inventori, pemesanan, dan tracking status produksi dengan antarmuka yang intuitif dan responsif.
